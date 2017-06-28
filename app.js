@@ -5,7 +5,7 @@ GAME RULES:
 - In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
 - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
-- The first player to reach 100 points on GLOBAL score wins the game
+- The first player to reach 50 points or whatever is set in the text input in global score wins the game.
 
 */
 // DOM = Document Object Model; used to connect webpages to scripts
@@ -13,13 +13,6 @@ GAME RULES:
 var scores, roundScore, activePlayer, dice, winner, gamePlaying;
 gamePlaying = true;
 init();
-
-//document.querySelector("#current-"+activePlayer).textContent = dice;
-//document.querySelector("#current-"+activePlayer).innerHTML = "<em>" + dice + "</em>";
-
-// can use query selector the other way
-//var x = document.querySelector("#score-0").textContent;
-//console.log(x);
 
 function roll ()
 {
@@ -131,10 +124,3 @@ function init()
 document.querySelector(".btn-roll").addEventListener("click", roll);
 document.querySelector(".btn-hold").addEventListener("click", updateScore);
 document.querySelector(".btn-new").addEventListener("click", newGame);
-// btn is called the callback function, called by another function that we passed in function as an argument
-// anonymous function is one that doesn't have a name, written where ftn is
-//document.querySelector(".btn-roll").addEventListener("click", function ()
-/*{
-  // Do something here
-}
-*/
